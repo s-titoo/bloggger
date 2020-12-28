@@ -1,0 +1,12 @@
+### INSTALL DEPENDENCIES
+
+conda env create --prefix ./venv --file environment.yml
+
+### SET-UP ENVIRONMENT VARIABLES (IN TERMINAL OR .ENV FILE)
+
+MAIL_SERVER = "" (string)
+MAIL_PORT = "" (integer)
+MAIL_USE_TLS = "" (boolean)
+MAIL_USERNAME = "" (string)
+MAIL_PASSWORD = "" (string)
+ADMINS = "" (string)
