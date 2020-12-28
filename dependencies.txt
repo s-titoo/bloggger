@@ -10,3 +10,29 @@ MAIL_USE_TLS = "" (boolean)
 MAIL_USERNAME = "" (string)
 MAIL_PASSWORD = "" (string)
 ADMINS = "" (string)
+
+MS_TRANSLATOR_KEY = "" (string)
+
+### PREPARE TRANSLATIONS (ALREADY DONE - FYI ONLY)
+
+// Extract the text to be translated
+pybabel extract -F babel.cfg -k _l -o messages.pot .
+
+// Create a language catalog (replace 'uk' to language you need)
+// Long command:
+pybabel init -i messages.pot -d app/translations -l <language-code>
+// Short command (cli):
+flask translate init <language-code>
+
+// Once you finish translating messages.po file, compile final translation
+// Long command:
+pybabel compile -d app/translations
+// Short command (cli):
+flask translate compile
+
+// If you wish to update translation (intelligent merge)
+pybabel extract -F babel.cfg -k _l -o messages.pot .
+// Long command:
+pybabel update -i messages.pot -d app/translations
+// Short command (cli):
+flask translate update
