@@ -25,3 +25,5 @@ class Config(object):
     LANGUAGES = ['en', 'pl', 'uk', 'ru']
     
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    
+    REDIS_URL = os.environ.get('REDIS_URL') or 'redis://'

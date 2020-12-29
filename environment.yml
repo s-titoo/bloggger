@@ -19,6 +19,7 @@ dependencies:
   - python=3.8.5
   - python-dotenv=0.14.0
   - requests=2.25.0
+  - rq=1.7.0
   - pip:
     - guess-language-spirit==0.5.3
 prefix: .\venv

@@ -1,0 +1,7 @@
+Dear {{ user.username }},
+
+Please find attached the requested archive of your posts.
+
+Best Regards,
+
+The bloggger Team
