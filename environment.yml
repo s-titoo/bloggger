@@ -3,6 +3,7 @@ channels:
   - defaults
   - conda-forge
 dependencies:
+  - elasticsearch=7.10.0
   - email_validator=1.1.1
   - flask=1.1.2
   - flask-babel=2.0.0

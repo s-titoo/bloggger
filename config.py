@@ -17,9 +17,11 @@ class Config(object):
     MAIL_USE_TLS = os.environ.get('MAIL_USE_TLS') is not None
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-    ADMINS = os.environ.get('ADMINS')[0]
+    ADMINS = os.environ.get('ADMINS')
     
     MS_TRANSLATOR_KEY = os.environ.get('MS_TRANSLATOR_KEY')
     
     POSTS_PER_PAGE = 5
     LANGUAGES = ['en', 'pl', 'uk', 'ru']
+    
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')

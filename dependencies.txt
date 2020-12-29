@@ -12,6 +12,12 @@ MAIL_PASSWORD = "" (string)
 ADMINS = "" (string)
 
 MS_TRANSLATOR_KEY = "" (string)
+ELASTICSEARCH_URL = "" (string)
+
+### SET-UP SEARCH ENGINE
+
+1. Install elasticsearch: https://www.elastic.co/guide/en/elasticsearch/reference/7.10/zip-windows.html
+2. Run it before starting your app: .\bin\elasticsearch.bat (from command line; . is a path to elasticsearch installation)
 
 ### PREPARE TRANSLATIONS (ALREADY DONE - FYI ONLY)
 
