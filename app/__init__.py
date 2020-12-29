@@ -1,6 +1,7 @@
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
+from elasticsearch import Elasticsearch
 from flask import Flask, request, current_app
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -9,7 +10,6 @@ from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
 from flask_babel import Babel, lazy_gettext as _l
-from elasticsearch import Elasticsearch
 from config import Config
 
 db = SQLAlchemy()
@@ -34,6 +34,7 @@ def create_app(config_class=Config):
     bootstrap.init_app(app)
     moment.init_app(app)
     babel.init_app(app)
+
     app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
         if app.config['ELASTICSEARCH_URL'] else None
 
@@ -58,7 +59,7 @@ def create_app(config_class=Config):
             mail_handler = SMTPHandler(
                 mailhost=(app.config['MAIL_SERVER'], app.config['MAIL_PORT']),
                 fromaddr='no-reply@' + app.config['MAIL_SERVER'],
-                toaddrs=app.config['ADMINS'], subject='bloggger Failure',
+                toaddrs=app.config['ADMINS'], subject='[bloggger] Failure',
                 credentials=auth, secure=secure)
             mail_handler.setLevel(logging.ERROR)
             app.logger.addHandler(mail_handler)
