@@ -1,2 +1,2 @@
-# bloggger
-A web application for a blogging platform.
+﻿# bloggger
+A web application for a microblogging platform.
