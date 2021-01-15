@@ -8,9 +8,9 @@
 
  - For all successsful requests response's status is `200 OK`. Exception is token revokation `204 NO CONTENT` and registration of a new user `201 CREATED`.
  
- - For requests supplied with wrong credentials response's status is `401 UNAUTHORIZED`. If you try to access resource without proper permissions (e.g. modify other' user's info), response's status will be `403 FORBIDDEN`.
+ - For requests supplied with wrong credentials response's status is `401 UNAUTHORIZED`. If you try to access resource without proper permissions (e.g. modify other user's info), response's status will be `403 FORBIDDEN`.
 
- - For requests supplied with invalid data based on internal web app's checks (i.e. modify username with name already reserved by another user or register user with exisitng username or email address), response's status will be `400 BAD REQUEST` with below body.
+ - For requests supplied with invalid data based on internal app's checks (i.e. modify username with name already reserved by another user or register user with exisitng username or email address), response's status will be `400 BAD REQUEST` with below body:
 
 	```
 	{
@@ -87,7 +87,7 @@
 	    "_links": {
 	        "avatar": <gravatar-link>,
 	        "followed": "/api/users/<id>/followed",
-	        "followers": "/api/users/<>id/followers",
+	        "followers": "/api/users/<id>/followers",
 	        "self": "/api/users/<id>"
 	    },
 	    "about_me": <text>,
@@ -100,9 +100,9 @@
 	}
 	```
 1. Return a collection of all users:
-	- Metadata about response is followed by users' info.
-	- Users' info is in the same format as in #1.
-	- Results are paginated: defalt is 10 users per page.
+	- Metadata about response is followed by users' info
+	- Users' info is in the same format as in #1
+	- Results are paginated: defalt is 10 users per page
 	```
 	{
 	    "_links": {

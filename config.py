@@ -26,3 +26,4 @@ class Config(object):
     
     POSTS_PER_PAGE = 5
     LANGUAGES = ['en', 'pl', 'ru', 'uk']
+    LOG_TO_STDOUT = os.environ.get('LOG_TO_STDOUT')
