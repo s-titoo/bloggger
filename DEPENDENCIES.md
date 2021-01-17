@@ -15,6 +15,22 @@ It can be done in terminal or .env file (`python-dotenv` package).
 `MS_TRANSLATOR_KEY` [string]
 `ELASTICSEARCH_URL` [string]
 
+## SET-UP EMAIL CONFIGURATION
+
+1. Make sure you are logged-in into ONE account only.
+1. Your app's configuration:
+	- Host (`MAIL_SERVER`): smtp.gmail.com
+	- Port (`MAIL_PORT`): 587 or 465 (587 for TLS, 465 for SSL)
+	- Protocol (`MAIL_USE_TLS`): TLS or SSL
+	- User (`MAIL_USERNAME`): YOUR_USERNAME@gmail.com
+	- Password (`MAIL_PASSWORD`): YOUR_PASSWORD
+1. Your Gmail's account configuration:
+	- If 2-Step Verification is turned on - you need to set-up and use [App Password][10]
+	- If it's off:
+		- Allow [Less Secure Apps][11] to access your account
+		- Visit this [page][12] and confirm your identity
+		- If you still have errors check app's logs and visit the page from error description: ` smtplib.SMTPAuthenticationError: (534, <link-goes-here> Please log in via your web browser and then try again)`
+
 ## SET-UP SEARCH ENGINE
 
 1. Install [elasticsearch][1].
@@ -71,7 +87,6 @@ Already done - FYI only.
 1. Add a Redis queue to your app:
 	- `heroku addons:create heroku-redis:hobby-dev`
 	- Redis url will be assigned to `REDIS_URL` env variable (the same we use in our app)
-	- Once you finish deployment use command to start the worker: `heroku ps:scale worker=1`
 1. Set-up environment variables:
 	- `heroku config:set`
 	- Required:
@@ -84,7 +99,14 @@ Already done - FYI only.
 		- `REDIS_URL`
 		- `PORT`
 		- `WEB_CONCURRENCY`
-		
+1. Do deployment:
+	- `git push heroku main`
+1. Start a worker for export posts task:
+	- `heroku ps:scale worker=1`
+1. Add search engine index:
+	- Go to SearchBox Elasticsearch add-on from your app's dashboard
+	- Choose Dashboard-Indices and add new `post` index
+	
 [1]: https://www.elastic.co/guide/en/elasticsearch/reference/7.10/zip-windows.html
 [2]: https://redis.io/
 [3]: https://github.com/microsoftarchive/redis/releases/tag/win-3.0.504
@@ -94,3 +116,6 @@ Already done - FYI only.
 [7]: https://devcenter.heroku.com/articles/heroku-cli
 [8]: https://heroku.com/
 [9]: https://heroku.com/verify
+[10]: https://support.google.com/accounts/answer/185833
+[11]: https://support.google.com/accounts/answer/6010255
+[12]: http://www.google.com/accounts/DisplayUnlockCaptcha

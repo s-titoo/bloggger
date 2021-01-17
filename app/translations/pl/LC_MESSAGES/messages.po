@@ -74,7 +74,7 @@ msgstr "Proszę użyć innego adresu e-mail."
 
 #: app/auth/forms.py:37 app/auth/forms.py:45
 msgid "Request Password Reset"
-msgstr "Zresetowac hasło"
+msgstr "Zresetować hasło"
 
 #: app/auth/routes.py:21
 msgid "Invalid username or password"
@@ -90,7 +90,7 @@ msgstr "Sprawdź prosze swoj e-mail, aby uzyskać instrukcje zresetowania hasła
 
 #: app/auth/routes.py:66 app/templates/auth/reset_password_request.html:5
 msgid "Reset Password"
-msgstr "Zresetowac hasło"
+msgstr "Zresetować hasło"
 
 #: app/auth/routes.py:80
 msgid "Your password has been reset."
@@ -165,7 +165,7 @@ msgstr "Twoja wiadomość została wysłana."
 
 #: app/main/routes.py:184
 msgid "Send Message"
-msgstr "Wyślac wiadomość"
+msgstr "Wysłać wiadomość"
 
 #: app/main/routes.py:221
 msgid "An export task is currently in progress"
@@ -262,7 +262,7 @@ msgstr "%(count)d obserwujących"
 #: app/templates/user.html:15 app/templates/user_popup.html:13
 #, python-format
 msgid "%(count)d following"
-msgstr "%(count)dobserwowanych"
+msgstr "%(count)d obserwowanych"
 
 #: app/templates/user.html:17
 msgid "Edit your profile"
@@ -273,12 +273,12 @@ msgid "Export your posts"
 msgstr "Eksportuj swoje posty"
 
 #: app/templates/user.html:29 app/templates/user_popup.html:20
-msgid "Obserwowac"
-msgstr ""
+msgid "Follow"
+msgstr "Obserwować"
 
 #: app/templates/user.html:36 app/templates/user_popup.html:27
 msgid "Unfollow"
-msgstr "Przestac obserwowac"
+msgstr "Przestać obserwować"
 
 #: app/templates/user.html:43
 msgid "Send message"

@@ -175,7 +175,7 @@ class User(UserMixin, PaginatedAPIMixin, db.Model):
         task = Task(id=rq_job.get_id(), name=name, description=description,
                     user=self)
         db.session.add(task)
-        db.commit()
+        db.session.commit()
         return task
 
     def get_tasks_in_progress(self):
