@@ -17,7 +17,6 @@ It can be done in terminal or .env file (`python-dotenv` package).
 
 ## SET-UP EMAIL CONFIGURATION
 
-1. Make sure you are logged-in into ONE account only.
 1. Your app's configuration:
 	- Host (`MAIL_SERVER`): smtp.gmail.com
 	- Port (`MAIL_PORT`): 587 or 465 (587 for TLS, 465 for SSL)
@@ -26,10 +25,13 @@ It can be done in terminal or .env file (`python-dotenv` package).
 	- Password (`MAIL_PASSWORD`): YOUR_PASSWORD
 1. Your Gmail's account configuration:
 	- If 2-Step Verification is turned on - you need to set-up and use [App Password][10]
-	- If it's off:
-		- Allow [Less Secure Apps][11] to access your account
-		- Visit this [page][12] and confirm your identity
-		- If you still have errors check app's logs and visit the page from error description: ` smtplib.SMTPAuthenticationError: (534, <link-goes-here> Please log in via your web browser and then try again)`
+	- If it's off - allow [Less Secure Apps][11] to access your account
+1. Check if you can send emails and fix the issue if not:
+	- Log-off from all your Google accounts
+	- Trigger email generation event (e.g. password reset)
+	- If you have errors check app's logs and visit a page from the error description: `smtplib.SMTPAuthenticationError: (534, <link-goes-here> Please log in via your web browser and then try again)`
+	- Make sure you are logged-in into ONE account only.
+	- Visit this [page][12] and confirm your identity
 
 ## SET-UP SEARCH ENGINE
 
