@@ -2,7 +2,7 @@
 
 ## ENDPOINT
 
- - TBC
+ - https://stitoo-bloggger.herokuapp.com/api/
 
 ## STATUSES
 
@@ -34,9 +34,9 @@
 ### REQUEST EXAMPLE
 
 1. Get authentication token:
-	-  `POST http://localhost:5000/api/tokens "Authorization: Basic <username>:<password>"`
+	-  `POST https://stitoo-bloggger.herokuapp.com/api/tokens "Authorization: Basic <username>:<password>"`
 2. Delete authentication token: 
-	- `DELETE http://localhost:5000/api/tokens "Authorization: Bearer <token-to-be-revoked>"`
+	- `DELETE https://stitoo-bloggger.herokuapp.com/api/tokens "Authorization: Bearer <token-to-be-revoked>"`
 
 ### RESPONSE EXAMPLE
 
@@ -67,17 +67,17 @@
 ### REQUEST EXAMPLE
 
 1. Return a user:
-	- `GET http://localhost:5000/api/users/<id> "Authorization: Bearer <token>"`
+	- `GET https://stitoo-bloggger.herokuapp.com/api/users/<id> "Authorization: Bearer <token>"`
 2. Return a collection of all users:
-	- `GET http://localhost:5000/api/users "Authorization: Bearer <token>"`
+	- `GET https://stitoo-bloggger.herokuapp.com/api/users "Authorization: Bearer <token>"`
 3. Return the followers of a user:
-	- `GET http://localhost:5000/api/users/<id>/followers "Authorization: Bearer <token>"`
+	- `GET https://stitoo-bloggger.herokuapp.com/api/users/<id>/followers "Authorization: Bearer <token>"`
 4. Return the users a user is following:
-	- `GET http://localhost:5000/api/users/<id>/followed "Authorization: Bearer <token>"`
+	- `GET https://stitoo-bloggger.herokuapp.com/api/users/<id>/followed "Authorization: Bearer <token>"`
 5. Register a new user:
-	- `POST http://localhost:5000/api/users username=<username> password=<password> email=<email> "about_me=<modified-value>"`
+	- `POST https://stitoo-bloggger.herokuapp.com/api/users username=<username> password=<password> email=<email> "about_me=<modified-value>"`
 6. Modify a user:
-	- `PUT http://localhost:5000/api/users/<id> "Authorization: Bearer <token>" "<field>=<modified-value>"`
+	- `PUT https://stitoo-bloggger.herokuapp.com/api/users/<id> "Authorization: Bearer <token>" "<field>=<modified-value>"`
 
 ### RESPONSE EXAMPLE
 

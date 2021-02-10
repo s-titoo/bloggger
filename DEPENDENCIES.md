@@ -6,14 +6,14 @@
 
 It can be done in terminal or .env file (`python-dotenv` package).
 
-`MAIL_SERVER` [string]
-`MAIL_PORT` [integer]
-`MAIL_USE_TLS` [boolean]
-`MAIL_USERNAME` [string]
-`MAIL_PASSWORD` [string]
-`ADMINS` [string]
-`MS_TRANSLATOR_KEY` [string]
-`ELASTICSEARCH_URL` [string]
+ - `MAIL_SERVER` [string]
+ - `MAIL_PORT` [integer]
+ - `MAIL_USE_TLS` [boolean]
+ - `MAIL_USERNAME` [string]
+ - `MAIL_PASSWORD` [string]
+ - `ADMINS` [string]
+ - `MS_TRANSLATOR_KEY` [string]
+ - `ELASTICSEARCH_URL` [string]
 
 ## SET-UP EMAIL CONFIGURATION
 
@@ -43,12 +43,10 @@ It can be done in terminal or .env file (`python-dotenv` package).
 1. Install Redis message queue:
 	 - [Linux / Mac OS][2]
 	 - [Windows][3]
-1. RQ task queue will be installed from ***INSTALL DEPENDENCIES*** step.
+1. RQ task queue will be installed from **INSTALL DEPENDENCIES** step.
 1. If you are using Windows, please note: *RQ workers will only run on systems that implement fork(). Most notably, this means it is not possible to run the workers on Windows without using the [Windows Subsystem for Linux][4] and running in a bash shell.*
 
 ## PREPARE TRANSLATIONS
-
-Already done - FYI only.
 
 1. Extract the text to be translated:
 	- `pybabel extract -F babel.cfg -k _l -o messages.pot .`

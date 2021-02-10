@@ -1,5 +1,5 @@
 ﻿## Introduction
-***Bloggger*** is a web app for a microblogging platform. It is written mainly in Python (with some JavaScript parts) using Flask framework. Feel free to explore and use!
+[Bloggger][24] is a web app for a microblogging platform. It is written mainly in Python (with some JavaScript parts) using Flask framework. Feel free to explore and use!
 
 ## Main Features
 * Public Posting
@@ -24,13 +24,13 @@
 	* [Jinja][3]
 	* [WTForms][4]
 * Web Server:
-	* [Flask Development Server][21] *(v0)*
-	* [gunicorn][22] *(v1)*
+	* [Flask Development Server][21] (v0)
+	* [gunicorn][22] (v1)
 * Hosting:
 	* [Heroku][20]
 * Database:
-	* [SQLite][16] *(v0)*
-	* [PostgreSQL][23] *(v1)*
+	* [SQLite][16] (v0)
+	* [PostgreSQL][23] (v1)
 	* [SQLAlchemy][17]
 	* [Alembic][18]
 * Authentication and Authorization:
@@ -74,3 +74,4 @@ This project wouldn't be possible without the great work done by ***Miguel Grinb
 [21]: https://flask.palletsprojects.com/en/1.1.x/server/
 [22]: https://gunicorn.org/
 [23]: https://www.postgresql.org/
+[24]: https://stitoo-bloggger.herokuapp.com/
